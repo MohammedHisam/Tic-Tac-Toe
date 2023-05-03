@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css?family=Mandali|Raleway:900&display=swap');
+
+
+html, body {
+  font-family: Mandali, Arial, sans-serif;
+  font-size: 16px;
+}
+
+section {
+  text-align: center;
+}
+
+.game--title {
+  font-size: 5rem;
+  color: #000000;
+  margin: 10px auto;
+}
+
+.game--container {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  width: 306px;
+  margin: 10px auto;
+}
+
+.cell {
+  font-family: Raleway, Courier, 'Courier New', Sans, sans-serif;
+  font-weight: bolder;
+  width: 100px;
+  height: 100px;
+  background-color: rgba(0,0,0,0.10);
+  margin: .3rem;
+  cursor: pointer;
+  line-height: 100px;
+  font-size: 60px;
+}
+
+
+#one {
+  border-radius: 10% 0 0 0;
+}
+
+#three {
+  border-radius: 0 10% 0 0;
+}
+
+#seven {
+  border-radius: 0 0 0 10%;
+}
+
+#nine {
+  border-radius: 0 0 10% 0;
+}
+
+@media (hover: hover){
+  .cell:hover {
+    cursor: pointer;
+    background: rgba(0,0,0,0.25);
+  }
+  
+  .cell:hover::before {
+    color: #000;
+    content: "O";
+  }
+  
+}
+
+
+.noHover{
+    pointer-events: none;
+}
+
+.x-color{
+  content: "X";
+  background: #004974;
+  color: #89dcf6;
+  text-shadow: 0 1px 6px rgba(0,0,0,0.85);
+}
+
+.o-color{
+  content: "O";
+  background: #a60011;
+  color: #ffc7b5;
+  text-shadow: 0 1px 6px rgba(0,0,0,0.85);
+}
+
+
+#end {
+  background: rgba(255, 255, 255, 0.85);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: none;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#message {
+  text-align: center;
+  font-size: 2rem;
+  line-height: 2.2rem;
+  font-weight: bold;
+}
+#message input {
+  background: #000;
+  color: #fff;
+  font-size: 1rem;
+  padding: 0.5rem 1.75rem;
+  margin: auto auto;
+  margin-top: 2rem;
+  cursor: pointer;
+}
+
