@@ -3,15 +3,18 @@
 
 html, body {
   font-family: Mandali, Arial, sans-serif;
-  font-size: 16px;
 }
 
 section {
   text-align: center;
 }
 
+p {
+  font-weight: bolder;
+}
+
 .game--title {
-  font-size: 5rem;
+  font-size: 50px;
   color: #000000;
   margin: 10px auto;
 }

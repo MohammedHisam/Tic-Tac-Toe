@@ -1,8 +1,12 @@
+result = document.getElementById("result");
+point = document.getElementById("score");
+
 let gameActive = true;
 let computer = "X";
 let human = "O";
 let currentPlayer = "X";
 let gameState = ["", "", "", "", "", "", "", "", ""];
+let score = 0
 
 const winningConditions = [
     [0, 1, 2],
@@ -56,17 +60,17 @@ function handleResultValidation() {
     }
 
     if (roundWon) {
-        result = document.getElementById("result");
-        result.innerHTML="Computer Won:("
+        score += 1;
+        result.innerHTML="You Lose:("
         gameActive = false;
+        point.innerHTML= score;
         document.getElementById("end").style.display = "block";
         return;
     }
 
     let roundDraw = !gameState.includes("");
     if (roundDraw) {
-        result = document.getElementById("result");
-        result.innerHTML="Tied game!"
+        result.innerHTML="Tied game!";
         document.getElementById("end").style.display = "block";
         gameActive = false;
         return;
